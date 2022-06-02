@@ -1,5 +1,6 @@
 let contador = 0;
-
+let costoTotal =0;
+let totalEnProductos=0;
 let element = document.getElementById("totalprecio")
 element.innerHTML="Total en precio";
 
@@ -86,3 +87,9 @@ txtNombre.style.border="";
 document.getElementById("alertValidaciones").style.display="none";
 contador++;
 document.getElementById("contadorProductos").innerHTML=contador;
+let precio = (Math.floor( (Math.random()*50)*100))/100;
+let cantidad= parseFloat(txtNumber.value);
+totalEnProductos += (cantidad<1)?Math.ceil(cantidad):parseInt(cantidad);
+document.getElementById("productosTotal").
+costoTotal +=(precio*cantidad);
+totalEnProductos.innerHTML = `
